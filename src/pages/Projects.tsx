@@ -5,6 +5,9 @@ import PopulationSurvey from "../assets/population_survey.svg";
 import PetRegistration from "../assets/pet_registration.svg";
 import ADIR from "../assets/adir.svg";
 import Portfolio from "../assets/portfolio.svg";
+import Metro from "../assets/metro.png";
+import Streamify from "../assets/streamify.png"; // Add your Streamify image here
+import Friendify from "../assets/friendify.png"; // Add your Friendify image here
 
 interface ProjectType {
     title: string;
@@ -17,12 +20,35 @@ interface ProjectType {
 // Define each project inside the array with title, description, tech, image, and link.
 const projects: ProjectType[] = [
     {
+        title: "Metro - E-commerce Frontend",
+        description: "A modern, responsive e-commerce website built purely with HTML and CSS. Inspired by Metro UI style, it showcases products, categories, and a clean grid layout.",
+        tech: ["HTML", "CSS"],
+        link: "https://rommelocon.github.io", // Replace with the actual GitHub or demo link
+        image: Metro // Update with the actual image path
+    },
+    {
+        title: "Streamify - Music Streaming App",
+        description:
+            "A Spotify-like music streaming web app built with Create React App. Integrated with the ShazamCore API for real-time song browsing and playback. (Note: API access is currently expired and needs an update.)",
+        tech: ["React", "Bootstrap", "Redux", "ShazamCore API"],
+        image: Streamify, // replace with actual image path
+        link: "https://merry-cajeta-40c2ba.netlify.app", // set a real URL if you publish it
+    },
+    {
+        title: "Friendify - Social Media Network",
+        description:
+            "A Facebook-inspired social media platform built using Laravel Blade. Includes features like posts, likes, comments, friend requests, and real-time notifications. The project is available on GitHub as I wasn't able to publish it live due to Laravel deployment costs at the time.",
+        tech: ["Laravel", "Blade", "MySQL", "TailwindCSS"],
+        image: Friendify,
+        link: "https://github.com/rommelocon/wd58p-capstone-group2-Friendify" // Set your deployment link if available
+    },
+    {
         title: "Face Recognition Attendance",
         description:
             "Raspberry Pi-based facial recognition with live detection, attendance logging, and offline sync.",
         tech: ["Python", "OpenCV", "Tkinter", "face_recognition"],
         image: FaceAttendance, // replace with actual image path
-        link: "#",
+        link: "https://github.com/rommelocon/FacialRecognitionAttendance",
     },
     {
         title: "Animal Population Survey",
@@ -37,7 +63,7 @@ const projects: ProjectType[] = [
             "ASP .NET Core"
         ],
         image: PopulationSurvey,
-        link: "#",
+        link: "",
     },
     {
         title: "Animal Disease Incident Reporting",
@@ -51,7 +77,7 @@ const projects: ProjectType[] = [
             "ASP .NET Core"
         ],
         image: ADIR,
-        link: "#",
+        link: "",
     },
     {
         title: "Pet Registration",
@@ -66,7 +92,7 @@ const projects: ProjectType[] = [
             "ASP .NET Core"
         ],
         image: PetRegistration,
-        link: "#",
+        link: "",
     },
     {
         title: "Portfolio Website",
@@ -74,7 +100,7 @@ const projects: ProjectType[] = [
             "This site! Built with Vite, React, Tailwind, and Framer Motion.",
         tech: ["React", "Vite", "TailwindCSS", "Framer Motion"],
         image: Portfolio,
-        link: "#",
+        link: "#home",
     },
 ];
 
@@ -109,8 +135,8 @@ const Project = () => {
                         key={tech}
                         onClick={() => setActiveFilter(tech)}
                         className={`px-4 py-2 rounded-full border ${activeFilter === tech
-                                ? "bg-fuchsia-500 text-white border-fuchsia-600"
-                                : "bg-black border-fuchsia-800 text-fuchsia-400 hover:bg-fuchsia-800/20"
+                            ? "bg-fuchsia-500 text-white border-fuchsia-600"
+                            : "bg-black border-fuchsia-800 text-fuchsia-400 hover:bg-fuchsia-800/20"
                             } transition-all duration-300 text-sm`}
                     >
                         {tech}
@@ -151,14 +177,16 @@ const Project = () => {
                                     </span>
                                 ))}
                             </div>
-                            {/* <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-auto text-sm text-fuchsia-400 hover:text-purple-300 transition hover:underline"
-                            >
-                                View Project →
-                            </a> */}
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-auto text-sm text-fuchsia-400 hover:text-purple-300 transition hover:underline"
+                                >
+                                    View Project →
+                                </a>
+                            )}
                         </div>
                     </motion.div>
                 ))}
