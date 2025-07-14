@@ -100,7 +100,7 @@ const projects: ProjectType[] = [
             "This site! Built with Vite, React, Tailwind, and Framer Motion.",
         tech: ["React", "Vite", "TailwindCSS", "Framer Motion"],
         image: Portfolio,
-        link: "#home",
+        link: "#",
     },
 ];
 

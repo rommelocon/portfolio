@@ -1,69 +1,120 @@
-# React + TypeScript + Vite
+# Rommel Jay Ocon - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official portfolio website of **Rommel Jay Ocon**, a passionate full-stack developer with a knack for building visually stunning, performant, and user-friendly applications. This site showcases my featured projects, skills, and contact information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React, TypeScript, TailwindCSS, Vite, Framer Motion
+- **Backend Projects:** .NET MAUI, ASP.NET Core, Laravel
+- **Database:** SQLite, MSSQL, MySQL, MongoDB
+- **Tools & Libraries:** DevExpress, Entity Framework, OpenCV, face\_recognition
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖥️ Live Site
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+📍 [https://rommelocon.github.io/portfolio](https://rommelocon.github.io/portfolio)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Featured Projects
+
+### 🎯 Face Recognition Attendance
+
+> Raspberry Pi-based facial recognition system with live detection, attendance logging, and offline syncing.
+
+### 🐾 Animal Population Survey
+
+> Mobile app for conducting animal surveys with chart visualization and offline capabilities.
+
+### 🚨 Animal Disease Incident Reporting
+
+> Simple and fast .NET MAUI reporting app for animal disease outbreaks.
+
+### 🐶 Pet Registration App
+
+> Offline-ready mobile app for registering pets with synced data management.
+
+### 🌐 Portfolio Website
+
+> This portfolio site, built with React + Vite + TailwindCSS + Framer Motion.
+
+### 🛒 Metro - E-commerce Frontend
+
+> A visually modern, static e-commerce homepage built using only HTML and CSS.
+
+### 🎵 Streamify
+
+> A Spotify-inspired music streaming app created with Create React App and ShazamCore API (now expired).
+
+### 👥 Friendify - Social Media Network
+
+> A Laravel Blade-based Facebook-style social media network. ⚠️ *Note: Only GitHub repo is available due to deployment cost limitations.*
+
+---
+
+## 📬 Contact
+
+- 📧 Email: [rjayocon06@gmail.com](mailto\:rjayocon06@gmail.com)
+- 🔗 LinkedIn: [linkedin.com/in/rjayocon](https://linkedin.com/in/rjayocon)
+- 💻 GitHub: [github.com/rommelocon](https://github.com/rommelocon)
+
+---
+
+## 📦 How to Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/rommelocon/portfolio.git
+cd portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Start the dev server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deploying to GitHub Pages
+
+1. Install `gh-pages`:
+
+```bash
+npm install gh-pages --save-dev
+```
+
+2. Set `base` in `vite.config.ts`:
+
+```ts
+base: '/portfolio/',
+```
+
+3. Add deploy script in `package.json`:
+
+```json
+"deploy": "vite build && gh-pages -d dist"
+```
+
+4. Deploy:
+
+```bash
+npm run deploy
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
